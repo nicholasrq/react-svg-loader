@@ -10,7 +10,7 @@ function optimize (opts) {
   const svgo = new Svgo(opts);
   return function (content) {
     return new Promise((resolve, reject) =>
-      svgo.optimize(content, ({error, data}) => error ? reject(error) : resolve(data))
+      svgo.optimize(content).then(({error, data}) => error ? reject(error) : resolve(data))
     );
   };
 }
