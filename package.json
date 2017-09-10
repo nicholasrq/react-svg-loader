@@ -24,7 +24,7 @@
     "react"
   ],
   "bin": {
-    "svg2react": "./lib/cli.js"
+    "svg2react": "./src/cli.js"
   },
   "author": "boopathi",
   "license": "MIT",
