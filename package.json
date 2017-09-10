@@ -23,9 +23,6 @@
     "webpack",
     "react"
   ],
-  "bin": {
-    "svg2react": "./lib/cli.js"
-  },
   "author": "boopathi",
   "license": "MIT",
   "bugs": {
