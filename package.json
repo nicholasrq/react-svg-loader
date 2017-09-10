@@ -28,7 +28,7 @@
   "bugs": {
     "url": "https://github.com/boopathi/react-svg-loader/issues"
   },
-  {
+  "bin": {
     "svg2js": "./src/cli.js"
   },
   "homepage": "https://github.com/boopathi/react-svg-loader#readme",
