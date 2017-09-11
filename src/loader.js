@@ -6,13 +6,17 @@ import {validateAndFix} from './svgo';
 import plugin from './plugin';
 
 function optimize (opts) {
-  validateAndFix(opts);
-  const svgo = new Svgo(opts);
-  return function (content) {
-    return new Promise((resolve, reject) =>
-      svgo.optimize(content).then(({error, data}) => error ? reject(error) : resolve(data))
-    );
-  };
+  if(opts === false){
+    return (content) => content;
+  } else {
+    validateAndFix(opts);
+    const svgo = new Svgo(opts);
+    return function (content) {
+      return new Promise((resolve, reject) =>
+        svgo.optimize(content).then(({error, data}) => error ? reject(error) : resolve(data))
+      );
+    };
+  }
 }
 
 function transform (opts) {
